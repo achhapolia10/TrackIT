@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
-import {Navbar,Nav} from 'react-bootstrap'
+import {Navbar,Nav,Form,Button} from 'react-bootstrap'
 import Layout from '../Components/Layout'
-
+import landingPage from '../Components/login';
 
 class Home extends Component{
 
@@ -15,7 +15,7 @@ class Home extends Component{
 
     return (
       <Layout isLoggedIn={true}>
-        <h1>This is body</h1>
+        <landingPage />
       </Layout>
     );
   }
