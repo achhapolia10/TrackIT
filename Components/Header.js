@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Navbar,Nav,Button} from 'react-bootstrap'
-
+import Link from 'next/link'
 
 class Header extends Component{
 
@@ -12,19 +12,18 @@ class Header extends Component{
     render(){
       let logButton;
       if(this.props.isLoggedIn)
-        logButton = <Button> Logout</Button>
+        logButton = <Link href ={"/logout"}><Button> Logout</Button></Link>
       else
-        logButton = <Button> Login</Button>
+        logButton =<Link href={"/login"}><Button> Login</Button></Link>
 
 
       return(
-        <Navbar variant="dark" bg="dark" sticky="top" expand="lg">
-        <Navbar.Brand href="/">Smoke Trees</Navbar.Brand>
+        <Navbar variant="dark" sticky="top" expand="lg" style={{backgroundImage:"linear-gradient(-90deg, purple, indigo)"}}>
+        <Navbar.Brand href='/'>Smoke Trees</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link>
+        <Nav className="mr-auto" justify variant="Nav">
+        <Nav.Link href="home">Home</Nav.Link>
 
         </Nav>
         {logButton}

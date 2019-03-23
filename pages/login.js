@@ -1,10 +1,9 @@
 import React,{Component} from 'react'
-import {Navbar,Nav,Form,Button,Container} from 'react-bootstrap'
+import {Navbar,Nav,Form,Button} from 'react-bootstrap'
 import Layout from '../Components/Layout'
-import Landing from '../Components/Landing1';
+import Login from '../Components/login';
 
-
-class SmokeTrees extends Component{
+class Home extends Component{
 
 
   constructor(props){
@@ -15,11 +14,8 @@ class SmokeTrees extends Component{
   render(){
 
     return (
-
       <Layout isLoggedIn={false}>
-        
-        <Landing />
-        
+        <Login/>
       </Layout>
     );
   }
@@ -29,4 +25,4 @@ class SmokeTrees extends Component{
 }
 
 
-export default SmokeTrees;
+export default Home;

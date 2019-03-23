@@ -23,9 +23,10 @@ class Layout extends Component{
             crossOrigin="anonymous"/>
         </Head>
           <Header isLoggedIn= {this.props.isLoggedIn} />
-          <Container>
+          
+
             {this.props.children}
-          </Container>
+            
         </div>  )
       }
 }
