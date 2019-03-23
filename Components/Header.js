@@ -11,10 +11,13 @@ class Header extends Component{
 
     render(){
       let logButton;
-      if(this.props.isLoggedIn)
+      let homeLink;
+      if(this.props.isLoggedIn){
         logButton = <Link href ={"/logout"}><Button> Logout</Button></Link>
-      else
+        homeLink = <Nav.Link href="home">Home</Nav.Link>
+      }else
         logButton =<Link href={"/login"}><Button> Login</Button></Link>
+
 
 
       return(
@@ -23,7 +26,7 @@ class Header extends Component{
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto" justify variant="Nav">
-        <Nav.Link href="home">Home</Nav.Link>
+        {homeLink}
 
         </Nav>
         {logButton}

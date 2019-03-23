@@ -24,7 +24,7 @@ class Data extends Component{
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-muted">2 days ago</Card.Footer>
-              </Card>;
+              </Card>
             </Col>
             <Col>
             <Card className="text-center">
@@ -36,7 +36,7 @@ class Data extends Component{
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-muted">2 days ago</Card.Footer>
-              </Card>;
+              </Card>
             </Col>
             <Col><Card className="text-center">
               <Card.Header style={{backgroundImage:"linear-gradient(-90deg, #614385, #516395)"}}>Featured</Card.Header>
@@ -47,7 +47,7 @@ class Data extends Component{
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-muted" >2 days ago</Card.Footer>
-              </Card>;
+              </Card>
             </Col>
           </Row>
           <Row>
@@ -55,7 +55,7 @@ class Data extends Component{
               <Card>
                 <Card.Header style={{backgroundImage:"linear-gradient(-90deg, #614385, #516395)"}}>Featured</Card.Header>
                 <Card.Body>This is some text within a card body.</Card.Body>
-              </Card>;
+              </Card>
             </Col>
             <Col>
               <Card>

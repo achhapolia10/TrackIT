@@ -6,7 +6,10 @@ import Landing from '../Components/Landing1';
 
 class SmokeTrees extends Component{
 
+  static async getInitialProps(ctx,loggedIn){
 
+    return({isLoggedIn:loggedIn})
+  }
   constructor(props){
     super(props)
   }
@@ -16,10 +19,10 @@ class SmokeTrees extends Component{
 
     return (
 
-      <Layout isLoggedIn={false}>
-        
+      <Layout isLoggedIn={this.props.isLoggedIn }>
+
         <Landing />
-        
+
       </Layout>
     );
   }

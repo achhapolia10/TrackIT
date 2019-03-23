@@ -6,6 +6,10 @@ import Data from '../Components/Data'
 
 class Home extends Component{
 
+  static async getInitialProps(ctx,loggedIn){
+    console.log(loggedIn)
+    return({isLoggedIn:loggedIn})
+  }
 
   constructor(props){
     super(props)
@@ -15,7 +19,7 @@ class Home extends Component{
   render(){
 
     return (
-      <Layout isLoggedIn={false}>
+      <Layout isLoggedIn={this.props.isLoggedIn}>
         <Data />
       </Layout>
     );
